@@ -1,0 +1,43 @@
+# Gerador de Senhas Seguras
+
+## 📖 Sobre o projeto
+Este é um **projeto de estudo e prática em Python**.  
+O objetivo é desenvolver habilidades em:
+- Programação com Python
+- Criação de interfaces gráficas (GUI) usando **Tkinter** e **ttkbootstrap**
+- Uso de bibliotecas modernas para design e usabilidade
+- Empacotamento de aplicações em executáveis para distribuição
+
+Não é um produto comercial, mas sim um exercício para aprender e evoluir como desenvolvedor.
+
+---
+
+## ⚙️ Funcionalidades
+- **Geração de senhas seguras** usando o módulo `secrets` (aleatoriedade criptográfica).
+- **Interface gráfica moderna** com tema claro/escuro.
+- **Personalização da senha**:
+  - Tamanho ajustável
+  - Inclusão/exclusão de letras maiúsculas, minúsculas, dígitos e símbolos
+  - Opção para excluir caracteres ambíguos (Il1O0)
+  - Garantia de pelo menos um caractere de cada tipo selecionado
+- **Indicador de força**:
+  - Barra de progresso colorida
+  - Entropia em bits
+  - Mensagens explicando motivos de fraqueza
+- **Microinterações**:
+  - Botão "Copiar" com feedback visual
+  - Botão "Olho" para mostrar/ocultar senha
+  - Texto temporário “Copiado!” ao copiar
+- **Acessibilidade**:
+  - Atalhos de teclado (Ctrl+G para gerar, Ctrl+C para copiar)
+  - Foco visível e navegação por teclado
+  - Contraste adequado nos temas
+
+---
+
+## 🚀 Como executar
+1. Clone ou baixe este repositório.
+2. Crie um ambiente virtual (opcional, recomendado):
+   ```bash
+   python -m venv venv
+
