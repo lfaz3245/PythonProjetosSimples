@@ -1,0 +1,55 @@
+🔧 Estrutura geral
+- Bibliotecas importadas:
+- tkinter: interface gráfica.
+- messagebox, filedialog: caixas de diálogo.
+- schedule: agendamento de tarefas.
+- time, threading: execução paralela sem travar a interface.
+- json, os: salvar/carregar dados.
+- datetime: manipulação de horários.
+- Variáveis globais:
+- MAX_TASKS: limite máximo de tarefas (15).
+- tasks: lista que guarda os campos de cada tarefa.
+- running: indica se o bot está ativo.
+- history: histórico de notificações disparadas.
+- SAVE_FILE: nome do arquivo JSON para salvar tarefas.
+
+📌 Funções principais
+- mostrar_notificacao(titulo, mensagem)
+Cria uma janela flutuante (Toplevel) no canto da tela com título e mensagem. Fecha automaticamente após 7 segundos. Também adiciona a notificação ao histórico.
+- enviar_notificacao(titulo, mensagem)
+Executa a notificação em uma thread separada para não travar a interface.
+- run_scheduler()
+Loop que roda continuamente verificando e executando tarefas agendadas.
+- update_task_list()
+Atualiza a lista de tarefas ativas exibida no Listbox.
+- update_history()
+Atualiza o histórico de notificações exibido na interface.
+- start_bot()
+Inicia o bot, agenda todas as tarefas configuradas (validando horários e repetições) e muda o status para “Ativo”.
+- stop_bot()
+Para o bot, limpa agendamentos e muda o status para “Desligado”.
+- add_task()
+Adiciona dinamicamente um novo conjunto de campos (nome, mensagem, horário, repetição) dentro da área de tarefas.
+- remove_task()
+Remove a última tarefa adicionada.
+
+🖥️ Interface gráfica
+- Janela principal (root): título, cor de fundo e tamanho fixo.
+- Cabeçalho: título “Bot de Notificações”.
+- Configurações: escolha da posição da notificação (inferior direito ou superior direito).
+- Área de tarefas:
+- Um Frame (task_frame) onde os campos das tarefas são adicionados.
+- Botões para adicionar e remover tarefas.
+- ⚠️ Aqui você pediu para adicionar scroll: basta encapsular o task_frame em um Canvas com Scrollbar, como fizemos na lista de tarefas. Assim, quando houver muitas tarefas, a rolagem aparece automaticamente.
+- Lista de tarefas:
+- Um Listbox dentro de um Frame com Scrollbar.
+- Mostra todas as tarefas ativas.
+- Botão “Atualizar Lista” para atualizar manualmente.
+- Histórico:
+- Um Listbox que mostra as últimas 20 notificações disparadas.
+- Status:
+- Um StringVar (status_var) que indica se o bot está “Ativo” ou “Desligado”.
+- Controle:
+- Botões para ligar e desligar o bot.
+
+
