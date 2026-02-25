@@ -1,1 +1,2 @@
-Pequenos projetos de Phython 
+Pequenos projetos em Phython 
+
